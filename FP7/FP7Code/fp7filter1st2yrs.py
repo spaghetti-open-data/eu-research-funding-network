@@ -33,6 +33,7 @@ from tulip import *
 # to run the script on the current graph
 
 def main(graph): 
+	degree = graph.getDoubleProperty('degree') # need this to filter out orgs not active in the first two years
 	ShortName = graph.getStringProperty("ShortName")
 	acronym = graph.getStringProperty("acronym")
 	call = graph.getStringProperty("call")
@@ -82,9 +83,11 @@ def main(graph):
 	viewTgtAnchorShape = graph.getIntegerProperty("viewTgtAnchorShape")
 	viewTgtAnchorSize = graph.getSizeProperty("viewTgtAnchorSize")
 	
-	twoYrsOrgs = graph.addSubGraph('twoYrsOrgs')
+	twoYrsEdges = graph.addSubGraph('twoYrsEdges')
 	for n in graph.getNodes():
-		twoYrsOrgs.addNode(n)
+		twoYrsEdges.addNode(n)
 	for e in graph.getEdges():
 		if startDate[e] < '2009-04-15':
-			twoYrsOrgs.addEdge(e)
+			twoYrsEdges.addEdge(e)
+	
+	

@@ -1,6 +1,8 @@
 # Powered by Python 2.7
 
-# RUN THIS FROM orgsOnly
+# RUN THIS FROM THE SUPERGRAPH OF THE GRAPH YOU WANT TO STACK
+# for the SOD16 hackathon we are interested in projects started in the first 28 months of FP7
+# so we run from twoYrsEdges
 
 # To cancel the modifications performed by the script
 # on the current graph, click on the undo button.
@@ -111,8 +113,8 @@ def main(graph):
 	viewTgtAnchorSize =  graph.getSizeProperty("viewTgtAnchorSize")
 
 	# Add the new subgraph and grab the parallel edges graph
-	stacked = graph.addSubGraph('stacked')	
-	nonStacked = graph.getSubGraph('twoYrsOrgs')
+	stacked = graph.addSubGraph('twoYrsStacked')	
+	nonStacked = graph.getSubGraph('twoYrsOrgsOnly')
 	
 	# add all nodes in graph1 to stacked
 	for n in nonStacked.getNodes():

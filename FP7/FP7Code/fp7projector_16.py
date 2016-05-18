@@ -1,5 +1,12 @@
 # Powered by Python 2.7
 
+# RUN THIS FROM THE GRAPH YOU WANT TO STACK. 
+# For the SOD16 hackathon, we are only interested in the first 28 months of FP7, so we use twoYrsOrgsOnly
+
+# before doing anything, run equalValue on the bipartite graph for projectNode
+# this gives two subgraphs, one of which contains only the organization-type nodes
+# use the Python shell to rename the graph for projectNode: False to orgsOnly
+
 # To cancel the modifications performed by the script
 # on the current graph, click on the undo button.
 
@@ -74,9 +81,6 @@ def main(graph):
 	viewTgtAnchorShape =  graph.getIntegerProperty("viewTgtAnchorShape")
 	viewTgtAnchorSize =  graph.getSizeProperty("viewTgtAnchorSize")
 
-	# before doing anything, run equalValue on the bipartite graph for projectNode
-	# this gives two subgraphs, one of which contains only the organization-type nodes
-	# use the Python shell to rename the graph for projectNode: False to orgsOnly
 	
 	# store the bipartite in a subgraph before adding any edges
 	bipartite = graph.addSubGraph('bipartite')
@@ -97,12 +101,12 @@ def main(graph):
 		if projectNode.getNodeValue(p) == True: # .. only of the "project" type
 			cost = totalCost.getNodeValue(p)
 			sp = subprogramme.getNodeValue(p)
-			participants = []
-			for e in graph.getInEdges(p): 
-				participants.append(graph.source(e))
+			participants = [] # a list of organizations participating in this project
+			for e in graph.getInEdges(p): # follow the incoming edges to get to the organizations participating in project p
+				participants.append(graph.source(e)) 
 			for i in range (len(participants)):
 				for j in range (i+1, len(participants)):
-					newEdge = onemode.addEdge(participants[i], participants[j])
+					newEdge = onemode.addEdge(participants[i], participants[j]) #connect all orgs in participants to each other
 					totalCost[newEdge] = cost
 					subprogramme[newEdge] = sp
 					startDate[newEdge] = startDate[p]
