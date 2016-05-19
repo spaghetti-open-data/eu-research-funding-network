@@ -43,7 +43,7 @@ def main(graph):
 	programme =  graph.getStringProperty("programme")
 	projectNode =  graph.getBooleanProperty("projectNode")
 	projectReference =  graph.getStringProperty("projectReference")
-	projectsTogether =  graph.getIntegerProperty("projectsTogether")
+	projectsTogether =  graph.getDoubleProperty("projectsTogether")
 	rcn =  graph.getStringProperty("rcn")
 	reference =  graph.getStringProperty("reference")
 	startDate =  graph.getStringProperty("startDate")

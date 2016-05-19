@@ -88,14 +88,30 @@ def main(graph):
 	viewTgtAnchorShape = graph.getIntegerProperty("viewTgtAnchorShape")
 	viewTgtAnchorSize = graph.getSizeProperty("viewTgtAnchorSize")
 
+	# create two Booleans to store the property of being intermediated and intermediated
+	intermediated = graph.getBooleanProperty('intermediated')
+	intermediator = graph.getBooleanProperty('intermediator')
+	# this is just for the visualization
+	intermediateViz = graph.getIntegerProperty('intermediateViz')
 	# create the property that stores the number of intermediated orgs
 	intermediatedOrgs = graph.getIntegerProperty('intermediatedNodes')
 	# store that number in a dictionary:{node: intermediatedOrgs}
+
+	# set the default values
+	for org in graph.getNodes():
+		intermediated[org] = False
+		intermediator[org] = False
+		intermediateViz[org] = 1
+	
 	iO = {}
 	for org in graph.getNodes():
-		if deepCollabDegree.getNodeValue(org) == 1:
-			for neighbor in graph.getInOutNodes(org):
-				if neighbor in iO:
+		if deepCollabDegree.getNodeValue(org) == 1: # intermediaries are neighbors of orgs with degree 1
+			intermediated[org] = True
+			intermediateViz[org] = 0
+			for neighbor in graph.getInOutNodes(org): #neighbor is the intermediary
+				intermediator[neighbor] = True
+				intermediateViz[neighbor] = 2
+				if neighbor in iO: # update the number of intermediated orgs in the dictionary
 					iO[neighbor] += 1
 				else:
 					iO[neighbor] = 1

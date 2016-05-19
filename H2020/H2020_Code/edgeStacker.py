@@ -62,7 +62,7 @@ def findEdge(node1, node2, graph1, directed = False, create = True):
 
 	
 def main(graph): 
-	projectsTogether =  graph.getIntegerProperty("projectsTogether")
+	projectsTogether =  graph.getDoubleProperty("projectsTogether")
 	moneyTogether = graph.getDoubleProperty('moneyTogether')
 	viewLayout =  graph.getLayoutProperty("viewLayout")
 	ShortName =  graph.getStringProperty("ShortName")

@@ -35,7 +35,7 @@ start_script = datetime.datetime.now()
 
 # initialize variables
 
-dirPath = '/Users/albertocottica/github/local/fp7-funding-network-analysis/CSV/'
+dirPath = '/Users/albertocottica/github/local/eu-research-funding-network/H2020/H2020_Data/'
 
 def loadProjects():
 	''' loads the projects CSV file and puts the results into a Dict'''
@@ -49,7 +49,7 @@ def loadProjects():
 def loadOrgs():
 	''' loads the orgs CSV file and puts the results into a Dict'''
 	orgsFile = dirPath + 'unique_org.csv'
-	orgs = csv.DictReader(open(orgsFile, 'rb'), delimiter=',') # in FP7 data it's comma separated
+	orgs = csv.DictReader(open(orgsFile, 'rb'), delimiter='\t') 
 	orgsList = []
 	for line in orgs:
 		orgsList.append(line)
@@ -151,26 +151,24 @@ def main(graph):
 	p2n = {} # Ben's map trick. This maps the rcn property of projects to their node objects.
 	counter = 0
 	for p in projectsList:
-		if p['startDate'] <= '2009-04-01': # we only include projects already started at the time of the last update of the dataset
-			counter += 1
-			# print ('Adding project ' + str(counter))
-			n = graph.addNode()
-			projectNode[n] = True # this is set to True for all projects!
-			rcnCode = p['rcn']
-			rcn[n] = rcnCode
-			p2n[rcnCode] = n # update the map
-			reference[n] = p['reference']
-			programmeCode[n] = p['programme']
-			title[n] = p['acronym']
-			startDate[n] = p['startDate']
-			endDate[n] = p['endDate']
-			totalCost[n] = cleanAmount(p['totalCost'])
-			ecMaxContribution[n] = cleanAmount(p['ecMaxContribution'])
-			call[n] = p['call']
-			fundingScheme[n] = p['fundingScheme']	
-			coordinator[n] = p['coordinator']
-			coordinatorCountry[n] = p['coordinatorCountry']
-	
+		counter += 1
+		n = graph.addNode()
+		projectNode[n] = True # this is set to True for all projects!
+		rcnCode = p['rcn']
+		rcn[n] = rcnCode
+		p2n[rcnCode] = n # update the map
+		reference[n] = p['reference']
+		programmeCode[n] = p['programme']
+		title[n] = p['acronym']
+		startDate[n] = p['startDate']
+		endDate[n] = p['endDate']
+		totalCost[n] = cleanAmount(p['totalCost'])
+		ecMaxContribution[n] = cleanAmount(p['ecMaxContribution'])
+		call[n] = p['call']
+		fundingScheme[n] = p['fundingScheme']	
+		coordinator[n] = p['coordinator']
+		coordinatorCountry[n] = p['coordinatorCountry']
+
 	
 	# now add the org-type nodes and populate their properties
 	print ('Adding organisation nodes...')
@@ -179,12 +177,11 @@ def main(graph):
 	for o in orgsList:
 		counter += 1
 		# print ('Adding org ' + str(counter))
-		# check that the organisation has not already been added
 		oNewOrgId = o['new_org_id']
-		oName = o['name']
 		n = graph.addNode()
+		newOrgId[n] = oNewOrgId
 		projectNode[n] = False # Set to False for all orgs! 
-		organisationName[n] = oName
+		organisationName[n] = o['name']
 		organisationShortName[n] = o['shortName']
 		# organisationNameNormal[n] = o['name_normal'] missing in FP7 data
 		organisationCountry[n] = o['country']
@@ -193,16 +190,19 @@ def main(graph):
 		o2n[oNewOrgId] = n #update the map
 			
 	# create an edge		
+	counter = 0
 	for e in edgesList:
 		try: 
-			source = o2n [e['new_org_id']]
+			sourceString = e['new_org_id'].strip() # this is needed because PIC numbers in the original file start with a space, example '  986355365'
+			source = o2n [sourceString]
 			target = p2n [e['projectRcn']]
 			newEdge = graph.addEdge(source, target)
 			# isCoordinator[newEdge] = False
 			# if o['organisationRole'] == coordinator:
 			# 	isCoordinator[newEdge] = True
 		except:
-			print ('Could not add org ' + e['new_org_id'] + ' to project' + e['projectRcn'])
+			counter += 1
+	print ('Could not add ' + str(counter) + ' edges.')
 
 	end_script = datetime.datetime.now()
 	running_time = end_script - start_script

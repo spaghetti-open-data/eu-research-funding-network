@@ -1,6 +1,6 @@
 # Powered by Python 2.7
 
-# RUN THIS FROM stable
+# RUN THIS FROM giantComp
 # it finds the number of uniquely intermediated organizations by each organization.
 # This is the number of orgs that are ONLY connected to the H2020 giant component by this org.
 
@@ -54,7 +54,7 @@ def main(graph):
 	projectNode = graph.getBooleanProperty("projectNode")
 	projectReference = graph.getStringProperty("projectReference")
 	projectUrl = graph.getStringProperty("projectUrl")
-	projectsTogether = graph.getIntegerProperty("projectsTogether")
+	projectsTogether = graph.getDoubleProperty("projectsTogether")
 	rcn = graph.getStringProperty("rcn")
 	reference = graph.getStringProperty("reference")
 	startDate = graph.getStringProperty("startDate")
@@ -85,13 +85,29 @@ def main(graph):
 	viewTgtAnchorShape = graph.getIntegerProperty("viewTgtAnchorShape")
 	viewTgtAnchorSize = graph.getSizeProperty("viewTgtAnchorSize")
 
+	# create two Booleans to store the property of being intermediated and intermediated
+	intermediated = graph.getBooleanProperty('intermediated')
+	intermediator = graph.getBooleanProperty('intermediator')
+	# this is just for the visualization
+	intermediateViz = graph.getIntegerProperty('intermediateViz')
 	# create the property that stores the number of intermediated orgs
 	intermediatedOrgs = graph.getIntegerProperty('intermediatedNodes')
 	# store that number in a dictionary:{node: intermediatedOrgs}
+	
+	# set the default values
+	for org in graph.getNodes():
+		intermediated[org] = False
+		intermediator[org] = False
+		intermediateViz[org] = 1
+	
 	iO = {}
 	for org in graph.getNodes():
 		if deepCollabDegree.getNodeValue(org) == 1: # intermediaries are neighbors of orgs with degree 1
+			intermediated[org] = True
+			intermediateViz[org] = 0
 			for neighbor in graph.getInOutNodes(org): #neighbor is the intermediary
+				intermediator[neighbor] = True
+				intermediateViz[neighbor] = 2
 				if neighbor in iO: # update the number of intermediated orgs in the dictionary
 					iO[neighbor] += 1
 				else:
