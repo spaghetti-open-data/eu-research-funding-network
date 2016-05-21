@@ -1,5 +1,7 @@
 # Powered by Python 2.7
 
+# RUN THIS FROM THE MAIN
+
 # To cancel the modifications performed by the script
 # on the current graph, click on the undo button.
 
@@ -114,6 +116,7 @@ def main(graph):
 	
 	# add all nodes in graph1 to stacked
 	for n in nonStacked.getNodes():
+		
 		stacked.addNode(n)
 		
 	# you go over all edges in graph1 and add only one edge to graph2

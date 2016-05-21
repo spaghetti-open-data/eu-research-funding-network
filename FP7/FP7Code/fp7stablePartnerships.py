@@ -1,6 +1,6 @@
 # Powered by Python 2.7
 
-# RUN FROM stacked graph. In the SOD 16 hackathon it is twoYrsStacked
+# RUN FROM stacked graph. 
 # 
 
 # To cancel the modifications performed by the script
@@ -78,7 +78,7 @@ def main(graph):
 	viewTgtAnchorSize =  graph.getSizeProperty("viewTgtAnchorSize")
 
 	# add the stable partnership subgraph 	
-	stable = graph.addSubGraph('twoYrsstable')
+	stable = graph.addSubGraph('stable')
 	
 	#next add all nodes and only edges encoding more than one partnership
 	

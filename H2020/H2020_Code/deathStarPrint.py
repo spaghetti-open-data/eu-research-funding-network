@@ -85,6 +85,7 @@ def main(graph):
 	viewTgtAnchorShape = graph.getIntegerProperty("viewTgtAnchorShape")
 	viewTgtAnchorSize = graph.getSizeProperty("viewTgtAnchorSize")
 	
+	print ('Organisation => [number of projects, stable partners, intermediated]')
 	deathStar = {}
 	for n in graph.getNodes():
 		starName = name.getNodeValue(n)

@@ -1,6 +1,6 @@
 # Powered by Python 2.7
 
-# RUN THIS FROM twoYrsStableGiantComp
+# RUN THIS FROM GiantComp
 # it finds the number of uniquely intermediated organizations by each organization.
 # This is the number of orgs that are ONLY connected to the FP7 giant component by this org.
 
@@ -104,10 +104,13 @@ def main(graph):
 		intermediateViz[org] = 1
 	
 	iO = {}
+	numIntermediated = 0
+	numIntermediaries = 0
 	for org in graph.getNodes():
 		if deepCollabDegree.getNodeValue(org) == 1: # intermediaries are neighbors of orgs with degree 1
 			intermediated[org] = True
 			intermediateViz[org] = 0
+			numIntermediated += 1
 			for neighbor in graph.getInOutNodes(org): #neighbor is the intermediary
 				intermediator[neighbor] = True
 				intermediateViz[neighbor] = 2
@@ -115,6 +118,12 @@ def main(graph):
 					iO[neighbor] += 1
 				else:
 					iO[neighbor] = 1
+					
+	print ('Intermediated: ' + str(numIntermediated))
+	for org in graph.getNodes():
+		if intermediator[org] == True:
+			numIntermediaries += 1
+	print ('Intermediaries: ' + str(numIntermediaries))
 	
 	for org in graph.getNodes():
 		if org in iO:

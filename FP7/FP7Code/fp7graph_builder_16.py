@@ -1,4 +1,14 @@
  # Powered by Python 2.7
+ 
+ # the order is:
+# fp7graphBuilder
+ #fp7projector
+ #fp7filter1st2yrs
+ #fp7dropOldOrgs
+ #fp7edgeStacker
+ #fp7stablePartnership
+ #fp7findIntermediatedOrgs
+ #deathStarPrint	
 
 # To cancel the modifications performed by the script
 # on the current graph, click on the undo button.
