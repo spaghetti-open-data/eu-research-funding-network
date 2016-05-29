@@ -165,6 +165,7 @@ def main(graph):
 		totalCost[n] = cleanAmount(p['totalCost'])
 		ecMaxContribution[n] = cleanAmount(p['ecMaxContribution'])
 		call[n] = p['call']
+		topics[n] = p['topics']
 		fundingScheme[n] = p['fundingScheme']	
 		coordinator[n] = p['coordinator']
 		coordinatorCountry[n] = p['coordinatorCountry']

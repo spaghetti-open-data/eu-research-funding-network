@@ -98,4 +98,5 @@ def main(graph):
 				
 	print (str(zeroPartners) + ' orgs have no partners')
 	print (str(zeroStablePartners) + ' orgs have no stable partners')
+	
 

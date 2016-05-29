@@ -15,7 +15,9 @@
 #   * Ctrl + R  : replace selected text.
 #   * Ctrl + Space  : show auto-completion dialog.
 
+import csv
 from tulip import *
+dirPath = '/Users/albertocottica/github/local/eu-research-funding-network/FP7/FP7Data/'
 
 # the updateVisualization(centerViews = True) function can be called
 # during script execution to update the opened views
@@ -85,17 +87,20 @@ def main(graph):
 	viewTgtAnchorShape = graph.getIntegerProperty("viewTgtAnchorShape")
 	viewTgtAnchorSize = graph.getSizeProperty("viewTgtAnchorSize")
 	
-	deathStar = {}
-	print ('Name => [Projects, Stable partnerships, number of intermediated organisations]')
+	deathStar = []
 	for n in graph.getNodes():
-		starName = name.getNodeValue(n)
-		starNumProj = numProj.getNodeValue(n)
-		starDegree = deepCollabDegree.getNodeValue(n)
-		starIntermediated = intermediatedNodes.getNodeValue(n)
-		keyMetrics = []
-		keyMetrics.append(starNumProj)
-		keyMetrics.append(starDegree)
-		keyMetrics.append(starIntermediated)
-		deathStar[starName] = keyMetrics
-		print (str(starName) + ' => ' + str(keyMetrics))
+		record ={}
+		record['name'] = name.getNodeValue(n)
+		record['numProj'] = numProj.getNodeValue(n)
+		record['degree'] = deepCollabDegree.getNodeValue(n)
+		record['intermediated'] = intermediatedNodes.getNodeValue(n)
+		deathStar.append(record)
+		
+	with open (dirPath + 'fp7deathstar.csv', 'w') as csvfile:
+		fieldnames = ['name', 'numProj', 'degree', 'intermediated']
+		writer = csv.DictWriter(csvfile, fieldnames = fieldnames)
+		writer.writeheader()
+		for org in deathStar:
+			writer.writerow(org)
+
 		

@@ -107,13 +107,14 @@ def main(graph):
 	numIntermediated = 0
 	numIntermediaries = 0
 	for org in graph.getNodes():
-		if deepCollabDegree.getNodeValue(org) == 1: # intermediaries are neighbors of orgs with degree 1
+		if deepCollabDegree.getNodeValue(org) == 1: # neighbors of orgs with degree 1 are intermediaries
 			intermediated[org] = True
 			intermediateViz[org] = 0
 			numIntermediated += 1
 			for neighbor in graph.getInOutNodes(org): #neighbor is the intermediary
-				intermediator[neighbor] = True
-				intermediateViz[neighbor] = 2
+				if deepCollabDegree.getNodeValue(neighbor) == 2: # this condition means the intermediator is itself intermediated.
+					intermediateViz[neighbor] = 2
+					intermediator[neighbor] = True
 				if neighbor in iO: # update the number of intermediated orgs in the dictionary
 					iO[neighbor] += 1
 				else:
