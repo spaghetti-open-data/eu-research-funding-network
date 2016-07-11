@@ -189,8 +189,8 @@ def main(graph):
 	o2n = {} # Ben's map trick
 	for o in orgsList:
 		counter += 1
-		# print ('Adding org ' + str(counter))
-		# check that the organisation has not already been added
+			# print ('Adding org ' + str(counter))
+			# check that the organisation has not already been added
 		oNewOrgId = str(o['new_org_id'])
 		oName = o['name']
 		n = graph.addNode()

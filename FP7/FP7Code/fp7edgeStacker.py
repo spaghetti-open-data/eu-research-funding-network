@@ -1,4 +1,4 @@
-# Powered by Python 2.7
+	# Powered by Python 2.7
 
 # RUN THIS FROM THE SUPERGRAPH OF THE GRAPH YOU WANT TO STACK
 # for the SOD16 hackathon we are interested in projects started in the first 28 months of FP7
@@ -120,18 +120,18 @@ def main(graph):
 	for n in nonStacked.getNodes():
 		stacked.addNode(n)
 		
-	# you go over all edges in graph1 and add only one edge to graph2
+	# you go over all edges in nonStacked and add only one edge to stacked
 	# also collect the data you are interested in
 	for edge in nonStacked.getEdges():
 		source = nonStacked.source(edge)
 		target = nonStacked.target(edge)
 		# source and target are nodes connect
 		subEdge = findEdge(source, target, stacked, False, True)
-		if subEdge == None: # grph2 does not contain any edge between source and target
+		if subEdge == None: # stacked does not contain any edge between source and target
 			subEdge = stacked.addEdge(source, target)
 			projectsTogether[subEdge] = 1
-			moneyTogether[subEdge] = totalCost(edge)		
-		# else: grph2 already contains an edge - you do not need to include that case 
+			moneyTogether[subEdge] = totalCost[edge]		
+		# else: stacked already contains an edge - you do not need to include that case 
 			# since you will have it in subEdge as a result of the call to findEdge
 		projectsTogether[subEdge] += 1
 		moneyTogether[subEdge] += totalCost[edge]

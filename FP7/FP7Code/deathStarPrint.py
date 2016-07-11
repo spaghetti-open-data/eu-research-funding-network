@@ -94,10 +94,12 @@ def main(graph):
 		record['numProj'] = numProj.getNodeValue(n)
 		record['degree'] = deepCollabDegree.getNodeValue(n)
 		record['intermediated'] = intermediatedNodes.getNodeValue(n)
+		record['country'] = country.getNodeValue(n)
+		record['new_org_id'] = new_org_id.getNodeValue(n)
 		deathStar.append(record)
 		
 	with open (dirPath + 'fp7deathstar.csv', 'w') as csvfile:
-		fieldnames = ['name', 'numProj', 'degree', 'intermediated']
+		fieldnames = ['name', 'numProj', 'degree', 'intermediated', 'country', 'new_org_id']
 		writer = csv.DictWriter(csvfile, fieldnames = fieldnames)
 		writer.writeheader()
 		for org in deathStar:

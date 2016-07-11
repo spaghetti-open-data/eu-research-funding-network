@@ -1,6 +1,6 @@
 # Powered by Python 2.7
 
-# RUN FROM stacked graph. 
+# RUN FROM main 
 # 
 
 # To cancel the modifications performed by the script
@@ -77,15 +77,17 @@ def main(graph):
 	viewTgtAnchorShape =  graph.getIntegerProperty("viewTgtAnchorShape")
 	viewTgtAnchorSize =  graph.getSizeProperty("viewTgtAnchorSize")
 
-	# add the stable partnership subgraph 	
+	# add the stable partnership subgraph as a child of the main. Avoid nesting!	
 	stable = graph.addSubGraph('stable')
+	stacked = graph.getSubGraph('stacked')
 	
 	#next add all nodes and only edges encoding more than one partnership
 	
-	for n in graph.getNodes():
+	for n in stacked.getNodes():
 		stable.addNode(n)
 		
-	for e in graph.getEdges():
+	for e in stacked.getEdges():
 		if projectsTogether[e] > 1:
 			stable.addEdge(e)
 			
+
