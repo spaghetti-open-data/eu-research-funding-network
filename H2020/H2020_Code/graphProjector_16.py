@@ -1,5 +1,9 @@
 # Powered by Python 2.7
 
+# before doing anything, run equalValue on the bipartite graph for projectNode
+# this gives two subgraphs, one of which contains only the ogranization-type nodes
+# use the Python shell to rename the graph for projectNode: False to orgsOnly
+
 # To cancel the modifications performed by the script
 # on the current graph, click on the undo button.
 
@@ -73,10 +77,6 @@ def main(graph):
 	viewTexture =  graph.getStringProperty("viewTexture")
 	viewTgtAnchorShape =  graph.getIntegerProperty("viewTgtAnchorShape")
 	viewTgtAnchorSize =  graph.getSizeProperty("viewTgtAnchorSize")
-
-	# before doing anything, run equalValue on the bipartite graph for projectNode
-	# this gives two subgraphs, one of which contains only the ogranization-type nodes
-	# use the Python shell to rename the graph for projectNode: False to orgsOnly
 	
 	# store the bipartite in a subgraph before adding any edges
 	bipartite = graph.addSubGraph('bipartite')

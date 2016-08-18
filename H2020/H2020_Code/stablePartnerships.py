@@ -1,5 +1,9 @@
 # Powered by Python 2.7
 
+# RUN FROM THE m
+# BEFORE RUNNING THE SCRIPT: run Degree from the stacked graph. Store the result in the degreeStacked property
+ 
+
 # To cancel the modifications performed by the script
 # on the current graph, click on the undo button.
 
@@ -28,6 +32,7 @@ from tulip import *
 # to run the script on the current graph
 
 def main(graph): 
+	degreeStacked = graph.getDoubleProperty('degreeStacked')
 	degree = graph.getLocalDoubleProperty('degree')
 	ShortName =  graph.getStringProperty("ShortName")
 	acronym =  graph.getStringProperty("acronym")
@@ -43,7 +48,7 @@ def main(graph):
 	programme =  graph.getStringProperty("programme")
 	projectNode =  graph.getBooleanProperty("projectNode")
 	projectReference =  graph.getStringProperty("projectReference")
-	projectsTogether =  graph.getIntegerProperty("projectsTogether")
+	projectsTogether =  graph.getDoubleProperty("projectsTogether")
 	rcn =  graph.getStringProperty("rcn")
 	reference =  graph.getStringProperty("reference")
 	startDate =  graph.getStringProperty("startDate")
