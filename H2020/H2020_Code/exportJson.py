@@ -96,24 +96,21 @@ def main(graph):
 	allData['nodes'] = []
 	allData['edges'] = []
 	for n in graph.getNodes():
-		thisNode = {}
 		thisNodeProperties = {}
 		thisNodeProperties['ID'] = new_org_id[n]
 		thisNodeProperties['name'] = name[n]
 		thisNodeProperties['ShortName'] = ShortName[n]
-		thisNodeProperties['number of projects'] = numProj[n]
-		thisNodeProperties['number of organisations for which this organisation is the only stable H2020 partner'] = intermediatedNodes[n]
-		thisNode['node'] = thisNodeProperties
-		allData['nodes'].append(thisNode)
+		thisNodeProperties['numProj'] = numProj[n]
+		thisNodeProperties['dependentOrgs'] = intermediatedNodes[n]
+		allData['nodes'].append(thisNodeProperties)
 	for e in graph.getEdges():
-		thisEdge = {}
+
 		thisEdgeProperties = {}
 		thisEdgeProperties ['source'] = new_org_id [graph.source(e) ]
 		thisEdgeProperties ['target'] = new_org_id [graph.target(e) ]
-		thisEdgeProperties ['number of projects that these two partners have co-participated in'] = projectsTogether[e]
-		thisEdgeProperties ['sum of the budgets of all the projects that these two partners have co-participated in'] = moneyTogether[e]
-		thisEdge['edge'] = thisEdgeProperties
-		allData ['edges'].append(thisEdge)
+		thisEdgeProperties ['collaborations'] = projectsTogether[e]
+		thisEdgeProperties ['collBudget'] = moneyTogether[e]
+		allData ['edges'].append(thisEdgeProperties)
 		
 	dirPath = '/Users/albertocottica/github/local/eu-research-funding-network/H2020/H2020_Data/'
 	with open (dirPath + 'H2020DeathStar.json', 'w') as jsonFile:
