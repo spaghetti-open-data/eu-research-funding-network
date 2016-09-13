@@ -105,6 +105,8 @@ def main(graph):
 		thisNodeProperties['numProj'] = numProj[n]
 		thisNodeProperties['country'] = country[n]
 		thisNodeProperties['dependentOrgs'] = intermediatedNodes[n]
+		thisNodeProperties['intermediated'] = intermediated[n]
+		thisNodeProperties['intermediary'] = intermediator[n]
 		thisNodeProperties['collaborators'] = totCollaborators[n]
 		if kCore[n] == 132:
 			deathStar[n] = True
@@ -122,7 +124,7 @@ def main(graph):
 		allData ['edges'].append(thisEdgeProperties)
 		
 	dirPath = '/Users/albertocottica/github/local/eu-research-funding-network/H2020/H2020_Data/'
-	with open (dirPath + 'H2020GiantComponent.json', 'w') as jsonFile:
+	with open (dirPath + str (graph.getName()) + '.json', 'w') as jsonFile:
 		json.dump(allData, jsonFile)
 		
 			
