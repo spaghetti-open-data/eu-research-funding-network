@@ -69,6 +69,7 @@ def main(graph):
 	topics = graph.getStringProperty("topics")
 	totContribution = graph.getDoubleProperty("totContribution")
 	totalCost = graph.getDoubleProperty("totalCost")
+	totCollaborators = graph.getDoubleProperty('totCollaborators')
 	viewBorderColor = graph.getColorProperty("viewBorderColor")
 	viewBorderWidth = graph.getDoubleProperty("viewBorderWidth")
 	viewColor = graph.getColorProperty("viewColor")
@@ -101,7 +102,9 @@ def main(graph):
 		thisNodeProperties['name'] = name[n]
 		thisNodeProperties['ShortName'] = ShortName[n]
 		thisNodeProperties['numProj'] = numProj[n]
+		thisNodeProperties['country'] = country[n]
 		thisNodeProperties['dependentOrgs'] = intermediatedNodes[n]
+		thisNodeProperties['collaborators'] = totCollaborators[n]
 		allData['nodes'].append(thisNodeProperties)
 	for e in graph.getEdges():
 

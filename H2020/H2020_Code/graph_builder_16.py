@@ -134,6 +134,7 @@ def main(graph):
 	organisationCountry = graph.getStringProperty('country')
 	organisationNumProj = graph.getDoubleProperty('numProj')
 	organisationTotalContribution = graph.getDoubleProperty('totContribution')
+	organisationTotalCollaborators = graph.getDoubleProperty('totCollaborators')
 	
 	# now create the properties of edges
 #	isCoordinator = graph.getBooleanProperty('isCoordinator')

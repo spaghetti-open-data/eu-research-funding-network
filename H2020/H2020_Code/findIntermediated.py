@@ -62,6 +62,7 @@ def main(graph):
 	topics = graph.getStringProperty("topics")
 	totContribution = graph.getDoubleProperty("totContribution")
 	totalCost = graph.getDoubleProperty("totalCost")
+	organisationTotalCollaborators = graph.getDoubleProperty('totCollaborators')
 	viewBorderColor = graph.getColorProperty("viewBorderColor")
 	viewBorderWidth = graph.getDoubleProperty("viewBorderWidth")
 	viewColor = graph.getColorProperty("viewColor")

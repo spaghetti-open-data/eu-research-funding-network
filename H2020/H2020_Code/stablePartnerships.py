@@ -1,7 +1,8 @@
 # Powered by Python 2.7
 
 # RUN FROM THE m
-# BEFORE RUNNING THE SCRIPT: run Degree from the stacked graph. Store the result in the degreeStacked property
+# BEFORE RUNNING THE SCRIPT: run Degree from the stacked graph. Store the result in the degreeStacked property.
+# Next, copy it onto the totCollaborators global property
  
 
 # To cancel the modifications performed by the script
@@ -56,6 +57,7 @@ def main(graph):
 	topics =  graph.getStringProperty("topics")
 	totContribution =  graph.getDoubleProperty("totContribution")
 	totalCost =  graph.getDoubleProperty("totalCost")
+	organisationTotalCollaborators = graph.getDoubleProperty('totCollaborators')
 	viewBorderColor =  graph.getColorProperty("viewBorderColor")
 	viewBorderWidth =  graph.getDoubleProperty("viewBorderWidth")
 	viewColor =  graph.getColorProperty("viewColor")
@@ -87,6 +89,7 @@ def main(graph):
 	
 	for n in stacked.getNodes():
 		stable.addNode(n)
+		totCollaborators[n] = degreeStacked[n] # copy the degreeStacked (local) property into a global one
 		
 	for e in stacked.getEdges():
 		if projectsTogether[e] > 1:
