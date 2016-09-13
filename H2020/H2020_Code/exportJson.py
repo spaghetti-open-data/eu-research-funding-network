@@ -70,6 +70,7 @@ def main(graph):
 	totContribution = graph.getDoubleProperty("totContribution")
 	totalCost = graph.getDoubleProperty("totalCost")
 	totCollaborators = graph.getDoubleProperty('totCollaborators')
+	deathStar = graph.getBooleanProperty('deathStar')
 	viewBorderColor = graph.getColorProperty("viewBorderColor")
 	viewBorderWidth = graph.getDoubleProperty("viewBorderWidth")
 	viewColor = graph.getColorProperty("viewColor")
@@ -105,6 +106,11 @@ def main(graph):
 		thisNodeProperties['country'] = country[n]
 		thisNodeProperties['dependentOrgs'] = intermediatedNodes[n]
 		thisNodeProperties['collaborators'] = totCollaborators[n]
+		if kCore[n] == 132:
+			deathStar[n] = True
+		else:
+			deathStar[n] = False
+		thisNodeProperties['deathStar'] = deathStar[n]
 		allData['nodes'].append(thisNodeProperties)
 	for e in graph.getEdges():
 
@@ -116,7 +122,7 @@ def main(graph):
 		allData ['edges'].append(thisEdgeProperties)
 		
 	dirPath = '/Users/albertocottica/github/local/eu-research-funding-network/H2020/H2020_Data/'
-	with open (dirPath + 'H2020DeathStar.json', 'w') as jsonFile:
+	with open (dirPath + 'H2020GiantComponent.json', 'w') as jsonFile:
 		json.dump(allData, jsonFile)
 		
 			
