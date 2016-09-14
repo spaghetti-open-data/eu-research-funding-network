@@ -108,20 +108,25 @@ def main(graph):
 		thisNodeProperties['intermediated'] = intermediated[n]
 		thisNodeProperties['intermediary'] = intermediator[n]
 		thisNodeProperties['collaborators'] = totCollaborators[n]
+		thisNodeProperties['x'] = viewLayout[n][0]
+		thisNodeProperties['y'] = viewLayout[n][1]
 		if kCore[n] == 132:
 			deathStar[n] = True
 		else:
 			deathStar[n] = False
 		thisNodeProperties['deathStar'] = deathStar[n]
 		allData['nodes'].append(thisNodeProperties)
+		
+	idCounter = 0 # generates a numeric ID for edges
 	for e in graph.getEdges():
-
 		thisEdgeProperties = {}
 		thisEdgeProperties ['source'] = new_org_id [graph.source(e) ]
 		thisEdgeProperties ['target'] = new_org_id [graph.target(e) ]
 		thisEdgeProperties ['collaborations'] = projectsTogether[e]
 		thisEdgeProperties ['collBudget'] = moneyTogether[e]
+		thisEdgeProperties['edgeId'] = idCounter
 		allData ['edges'].append(thisEdgeProperties)
+		idCounter += 1
 		
 	dirPath = '/Users/albertocottica/github/local/eu-research-funding-network/H2020/H2020_Data/'
 	with open (dirPath + str (graph.getName()) + '.json', 'w') as jsonFile:
