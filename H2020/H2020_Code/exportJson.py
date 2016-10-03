@@ -120,8 +120,10 @@ def main(graph):
 	idCounter = 0 # generates a numeric ID for edges
 	for e in graph.getEdges():
 		thisEdgeProperties = {}
-		thisEdgeProperties ['source'] = name [graph.source(e) ]
-		thisEdgeProperties ['target'] = name [graph.target(e) ]
+		thisEdgeProperties ['sourceName'] = name [graph.source(e) ]
+		thisEdgeProperties ['targetName'] = name [graph.target(e) ]
+		thisEdgeProperties ['source'] = new_org_id [graph.source(e) ]
+		thisEdgeProperties ['target'] = new_org_id [graph.target(e) ]
 		thisEdgeProperties ['collaborations'] = projectsTogether[e]
 		thisEdgeProperties ['collBudget'] = moneyTogether[e]
 		thisEdgeProperties['edgeId'] = idCounter
