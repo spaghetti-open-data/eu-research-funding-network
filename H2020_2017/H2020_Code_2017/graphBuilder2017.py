@@ -29,7 +29,7 @@ dirPath = '/Users/albertocottica/github/local/eu-research-funding-network/H2020/
 def loadProjects():
 	''' loads the projects CSV file and puts the results into a Dict'''
 	projectsFile = dirPath + 'cordis-h2020projects.tsv'
-	projects = csv.DictReader(open(projectsFile, 'rb'), delimiter='\t')
+	projects = csv.DictReader(open(projectsFile, 'r'), delimiter='\t')
 	projectsList = []
 	for line in projects:
 		projectsList.append(line)
@@ -42,7 +42,7 @@ def loadEdges():
 	Projects with n partners map onto n lines of the file.
 	'''
 	edgesFile = dirPath + 'cordis-h2020organizations.tsv'
-	edges = csv.DictReader(open(edgesFile, 'rb'), delimiter = '\t')
+	edges = csv.DictReader(open(edgesFile, 'r'), delimiter = '\t')
 	edgesList = []
 	for edge in edges:
 		edgesList.append(edge)
