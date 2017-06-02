@@ -24,12 +24,12 @@ from tulip import *
 start_script = datetime.datetime.now()
 
 # initialize variables
-dirPath = '/Users/albertocottica/github/local/eu-research-funding-network/H2020/H2020_Data_2017/'
+dirPath = '/Users/albertocottica/github/local/eu-research-funding-network/H2020_2017/H2020_Data_2017/'
 
 def loadProjects():
 	''' loads the projects CSV file and puts the results into a Dict'''
 	projectsFile = dirPath + 'cordis-h2020projects.tsv'
-	projects = csv.DictReader(open(projectsFile, 'r'), delimiter='\t')
+	projects = csv.DictReader(open(projectsFile, 'rb'), delimiter='\t')
 	projectsList = []
 	for line in projects:
 		projectsList.append(line)
@@ -42,7 +42,7 @@ def loadEdges():
 	Projects with n partners map onto n lines of the file.
 	'''
 	edgesFile = dirPath + 'cordis-h2020organizations.tsv'
-	edges = csv.DictReader(open(edgesFile, 'r'), delimiter = '\t')
+	edges = csv.DictReader(open(edgesFile, 'rb'), delimiter = '\t')
 	edgesList = []
 	for edge in edges:
 		edgesList.append(edge)
@@ -53,14 +53,15 @@ def cleanAmount(dirtyString):
 	(str) => float
 	takes an amount given as a string in the CSV, cleans the string and
 	converts it to float
+	TAKE CARE: missing values are returned as zero. There are many in the 'ecContribution' field (within-org)
 	'''
 	if dirtyString == '':
-		print ('Missing value!')
 		return 0
 	else: 
 		replaceComma = dirtyString.replace(',', '.', 1)
 		stripEnd = replaceComma.strip('.')
 		return float(stripEnd)
+	
 
 
 # the updateVisualization(centerViews = True) function can be called
@@ -131,6 +132,8 @@ def main(graph):
   
   # properties of edges
   role = graph.getStringProperty('role')
+  ecContribution = graph.getDoubleProperty('ecContribution') # the money received by this organisation for this project
+  endOfParticipation = graph.getBooleanProperty('endOfParticipation')
   
   graph.setName('main graph') # this is just to store stuff, it has no economic or social interpretation
   bipartite = graph.addSubGraph('bipartite') # create the bipartite orgs-to-projects graph.
@@ -192,6 +195,11 @@ def main(graph):
     thisEdgeProject = p2n[e['projectRcn']]
     newEdge = bipartite.addEdge(o, thisEdgeProject)
     role[newEdge] = e['role']
+    ecContribution[newEdge] = cleanAmount(e['ecContribution'])
+    if e['endOfParticipation'] in ['True', 'true']:
+      endOfParticipation[newEdge] = True
+    else:
+      endOfParticipation[newEdge] = False
   print (str(counter) + ' organizations added.')
   
   end_script = datetime.datetime.now()

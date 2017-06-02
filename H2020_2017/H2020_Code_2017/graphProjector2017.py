@@ -92,10 +92,6 @@ def main(graph):
   for p in bipartite.getNodes(): # iterate over nodes...
 		if projectNode.getNodeValue(p) == True: # only for project-type nodes
 			projectAcronym = acronym.getNodeValue(p)
-#			cost = totalCost.getNodeValue(p)
-#			thisProjectCall = call.getNodeValue(p)
-#			eMC = ecMaxContribution.getNodeValue(p)
-#			prog = programme.getNodeValue(p)
 			participants = []
 			for e in graph.getInEdges(p):
 			  	participants.append(graph.source(e))
