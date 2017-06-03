@@ -1,0 +1,421 @@
+﻿code;title;description;language
+MBI;Medizinische Biotechnologie;;de
+MBI;Biotecnologia medica;;it
+MBI;Biotechnologia medyczna;;pl
+MBI;Biotechnologie médicale;;fr
+MBI;Medical biotechnology;;en
+MBI;Biotecnología médica;;es
+FIS;Kernspaltung;;de
+FIS;Fissione nucleare;;it
+FIS;Rozszczepienie jadra atomowego;;pl
+FIS;Fission nucléaire;;fr
+FIS;Nuclear Fission;"Reactor operation; decommissioning; reactor physics; pressure vessels; safeguarding techniques; fuel fabrication and reprocessing; irradiation facilities; uranium; plutonium and thorium ores; Transuranic elements/actinides; fissile materials (excluding radioactive waste management).";en
+FIS;Fisión nuclear;;es
+EAR;Geowissenschaften;;de
+EAR;Scienze della Terra;;it
+EAR;Nauki o ziemi;Nauki o ziemi;pl
+EAR;Sciences de la terre;;fr
+EAR;Earth Sciences;"Geology; mineralogy; geography; geophysics; geo-chemistry; soil science; cartography.";en
+EAR;Ciencias de la Tierra;;es
+ENV;Umweltschutz;;de
+ENV;Protezione ambientale;;it
+ENV;Ochrona srodowiska;Ochrona środowiska;pl
+ENV;Protection de l'environnement;;fr
+ENV;Environmental Protection;"Measurement and detection of pollution; effects of pollutants; aerosals and particulate emissions; water quality; acid rain; soil pollution; ecology and radio-ecology; limitation/prevention actions on pollution.";en
+ENV;Protección del medio ambiente;;es
+SPA;Weltraum- und Satellitenforschung;;de
+SPA;Ricerca spaziale e satellitare;;it
+SPA;Przestrzeń kosmiczna i badania satelitarne;;pl
+SPA;Recherche spatiale et par satellite ;;fr
+SPA;Space and satellite research;;en
+SPA;Investigación sobre el espacio y satélites;;es
+AER;Luft- und Raumfahrttechnik;;de
+AER;Tecnologia aerospaziale;;it
+AER;Technologia kosmiczna;Technologia kosmiczna;pl
+AER;Technologie aérospatiale;;fr
+AER;Aerospace Technology;"Aeronauticaltechnology; aircraft; avionics; space exploration and technology.";en
+AER;Tecnología aeroespacial;;es
+FOR;Prognostik;;de
+FOR;Previsioni;;it
+FOR;Prognozy;;pl
+FOR;Prévisions;;fr
+FOR;Forecasting;"Identification of future developments in RTD and long-term strategic options; input to RTD policies; forecasting methodologies.";en
+FOR;Previsiones;;es
+MAT;Werkstofftechnik;;de
+MAT;Tecnologia dei materiali ;;it
+MAT;Technologia materialowa;;pl
+MAT;Technologie des matériaux;;fr
+MAT;Materials Technology;"Plastics, rubber, polymers and composite materials; adhesives; ceramics; coatings; metals and alloys; iron and steel, steelworks, properties and utilization of steels; miscellaneous materials; properties of materials, corrosion and degradation.";en
+MAT;Tecnología de materiales;;es
+ROB;Robotik ;;de
+ROB;Robotica ;;it
+ROB;Robotyka ;;pl
+ROB;Robotique ;;fr
+ROB;Robotics;;en
+ROB;Robótica;;es
+RWA;Radioaktive Abfälle;;de
+RWA;Scorie radioattive;;it
+RWA;Odpady radioaktywne;;pl
+RWA;Déchets radioactifs;;fr
+RWA;Radioactive Waste;"Management and storage of radioactive waste; radioactive waste treatment; disposal in deep land or sub-seabed formations; remote handling; container materials and matrices.";en
+RWA;Residuos radiactivos;;es
+FOO;Lebensmittel;;de
+FOO;Alimentari;;it
+FOO;Zywnosc;;pl
+FOO;Alimentation;;fr
+FOO;Food;"Nutritional and toxicological properties of foodstuffs; processed agricultural and aquacultural produce; food additives; food containers and handling; food technology.";en
+FOO;Alimentación;;es
+MST;Mathematik und Statistik;;de
+MST;Matematica e statistiche;;it
+MST;Matematyka i statystyka;;pl
+MST;Mathématiques et statistique;;fr
+MST;Mathematics and Statistics;"Mathematical theory; statistical analysis; operational research; numerical analysis; mathematical modelling. (See also application area)";en
+MST;Matemáticas y Estadística;;es
+IND;Industrielle Fertigung;;de
+IND;Produzione industriale;;it
+IND;Produkcja przemyslowa;Produkcja przemysłowa;pl
+IND;Fabrication industrielle;;fr
+IND;Industrial Manufacture;"Industrial processes; process control; plant design and maintenance; machine tools; advanced design and manufacturing techniques; use of automated tools.";en
+IND;Producción industrial;;es
+ETH;Forschungsethik;;de
+ETH;Etica della ricerca;;it
+ETH;Etyka badań;;pl
+ETH;Éthique de la recherche;;fr
+ETH;Research ethics;;en
+ETH;Ética de la investigación;;es
+SEC;Sicherheit;;de
+SEC;Sicurezza;;it
+SEC;Bezpieczeństwo;;pl
+SEC;Sécurité;;fr
+SEC;Security;;en
+SEC;Seguridad;;es
+RSE;Regenerative Energieträger;;de
+RSE;Fonti di energia rinnovabile;;it
+RSE;Odnawialne zródla energii;;pl
+RSE;Sources d'énergie renouvelables;;fr
+RSE;Renewable Sources of Energy;"Tidal wave and wind energy; hydro-electric power; geothermal energy; energy from biomass; solar energy; photovoltaics; unconventional and alternative energies.";en
+RSE;Fuentes de energía renovable;;es
+EDU;Ausbildung und Schulung;;de
+EDU;Istruzione e formazione;;it
+EDU;Edukacja i szkolenie;;pl
+EDU;Education et formation;;fr
+EDU;Education and Training;"Education of children and adults; university, polytechnic and college students; teaching methods; training needs; in-service training; vocational training; retraining; distance learning.";en
+EDU;Educación y Formación;;es
+WAS;Abfallwirtschaft;;de
+WAS;Gestione dei rifiuti;;it
+WAS;Gospodarka odpadami;;pl
+WAS;Gestion des déchets;;fr
+WAS;Waste Management;"Non-nuclear waste (for other types see ""Radioactive Waste""); recycling, recovery and reclamation; incineration and pyrolysis; land and sea disposal; bioconversion; landfill; industrial waste; energy from waste.";en
+WAS;Gestión de residuos;;es
+CLC;Saubere Kohletechnologien ;;de
+CLC;Tecnologie pulite del carbone ;;it
+CLC;Technologie korzystne dla środowiska pod względem;;pl
+CLC;Technologies de charbon propre;;fr
+CLC;Clean coal technologies ;;en
+CLC;Tecnologías limpias del carbón ;;es
+WAT;Wasserressourcen und Wasserbewirtschaftung;;de
+WAT;Risorse idriche e gestione;;it
+WAT;Zasoby wodne i gospodarowanie nimi;;pl
+WAT;Ressources en eau et gestion;;fr
+WAT;Water resources and management;;en
+WAT;Recursos hídricos y gestión;;es
+SAF;Sicherheit;;de
+SAF;Sicurezza;;it
+SAF;Bezpieczenstwo;;pl
+SAF;Sécurité;;fr
+SAF;Safety;"Safety engineering; safety at work; assessment of risk; reliability of components and systems; industrial hazards;; natural hazards; transportation of hazardous materials; accident analysis and reporting.";en
+SAF;Seguridad;;es
+COO;Koordinierung und Zusammenarbeit;;de
+COO;Coordinamento e cooperazione;;it
+COO;Koordynacja i wspólpraca;Koordynacja i wspołpraca;pl
+COO;Coordination et coopération;;fr
+COO;Coordination and Cooperation;Promotion of joint actions, the exchange of information, mobility, sharing of research resources, comparison exercises.;en
+COO;Coordinación y Cooperación;;es
+RAD;Strahlenschutz;;de
+RAD;Protezione contro le radiazioni;;it
+RAD;Ochrona przed promieniowaniem;;pl
+RAD;Radioprotection;;fr
+RAD;Radiation Protection;"Radiation shielding; dosimetry; radiation and radioisotope effects on man, animals, plants and micro-organisms.";en
+RAD;Protección contra las radiaciones;;es
+CON;Bautechnik;;de
+CON;Tecnologia di costruzione;;it
+CON;Budownictwo;Budownictwo;pl
+CON;Technologie de la construction;;fr
+CON;Construction Technology;"Civil engineering; construction equipment; materials, components and methods; structural reliability; fire resistance; sound insulation; architectural design; building regulations; use of steel, wood, cork, concrete etc. for building purposes.";en
+CON;Tecnología de la construcción;;es
+STA;Normen and Standards;;de
+STA;Standard;;it
+STA;Standardy;;pl
+STA;Normalisation;;fr
+STA;Standards;"Technical standards; quality standards; national and international standards; harmonization of standards. (See also ""Reference Materials"")";en
+STA;Normas;;es
+POL;Strategien;;de
+POL;Politiche;;it
+POL;Linie polityczne;;pl
+POL;Stratégies;;fr
+POL;Policies;Formulation, evaluation or application of policies, policy strategies or plans of action for research and development in science and technology.;en
+POL;Políticas;;es
+NNT;Nanotechnologien und Nanowissenschaften;;de
+NNT;Nanotecnologia e nanoscienze;;it
+NNT;Nanotechnologie i nanonauki;;pl
+NNT;Nanotechnologie et nanosciences;;fr
+NNT;Nanotechnology and Nanosciences;;en
+NNT;Nanotecnología y nanociencias;;es
+SDT;Nachhaltige Entwicklung ;;de
+SDT;Sviluppo sostenibile ;;it
+SDT;Zrównoważony rozwój ;;pl
+SDT;Développement durable ;;fr
+SDT;Sustainable development ;;en
+SDT;Desarrollo sostenible ;;es
+ESV;Energieeinsparung;;de
+ESV;Risparmio di energia;;it
+ESV;Oszczednosc energii;;pl
+ESV;Economie d'énergie;;fr
+ESV;Energy Saving;"Energy conservation; increased efficiency of energy use; energy audits; heat transmission and storage; heat pumps; thermal insulation; use of waste heat.";en
+ESV;Ahorro energético;;es
+SEA;Meeresschätze und Fischerei;;de
+SEA;Risorse del mare e Pesca;;it
+SEA;Zasoby morza i rybolówstwo;;pl
+SEA;Ressources de la mer et pêche;;fr
+SEA;Resources of the Sea and Fisheries;"Marine science; oceanography; oceanology; exploitation of the seabed; fisheries; aquaculture.";en
+SEA;Recursos marinos y Pesca;;es
+AUT;Automatisierung;;de
+AUT;Automazione;;it
+AUT;Automatyzacja;;pl
+AUT;Automatisation;;fr
+AUT;Automation;;en
+AUT;Automatización;;es
+VAS;Veterinär - und Tierwissenschaften ;;de
+VAS;Scienze veterinarie e degli animali ;;it
+VAS;Weterynaria i nauki o zwierzętach ;;pl
+VAS;Sciences vétérinaires et des animaux ;;fr
+VAS;Veterinary and animal sciences;;en
+VAS;Ciencias veterinarias y de los animales ;;es
+EST;Energiespeicherung und Energietransport;;de
+EST;Immagazzinamento di energia Trasporto di energia;;it
+EST;Magazynowanie energii i transport energii;;pl
+EST;Conservation de l'énergie et transport de l'énergie;;fr
+EST;Energy Storage and Energy Transport;"The storage, transmission and conversion of energy; use of hydrogen for energy transport; cells; secondary energy vectors.";en
+EST;Almacenamiento de energía Transporte de energía;;es
+FUS;Kernfusion;;de
+FUS;Fusione nucleare;;it
+FUS;Synteza jadrowa;Synteza jądrowa;pl
+FUS;Fusion nucléaire;;fr
+FUS;Nuclear Fusion;"Tokamaks; plasma physics; electron dynamics and confinement; components and materials; instabilities and turbulence; MHD equilibrium; safeguarding techniques; electric and magnetic fields; impurities; ignition; modelling.";en
+FUS;Fusión nuclear;;es
+ECO;Wirtschaftliche Aspekte;;de
+ECO;Aspetti economici;;it
+ECO;Aspekty ekonomiczne;Aspekty ekonomiczne;pl
+ECO;Aspects économiques;;fr
+ECO;Economic Aspects;"Economic sciences; economic analysis and theory; economic aspects of RTD.";en
+ECO;Aspectos económicos;;es
+BIF;Biobrennstoffe;;de
+BIF;Biocarburanti;;it
+BIF;Biopaliwa;;pl
+BIF;Biocarburants;;fr
+BIF;Biofuels;;en
+BIF;Biocombustibles;;es
+TRA;Verkehr;;de
+TRA;Trasporti;;it
+TRA;Transport;;pl
+TRA;Transports;;fr
+TRA;Transport;"Road, track and rail transport; design of vehicles and systems; transportation by sea and inland waterways; air transportation; pipelines; transport infrastructure; prototypes, trial and pilot schemes. (For transportation of hazardous materials see ""Safety"").";en
+TRA;Transportes;;es
+ELM;Elektronik und Mikroelektronik;;de
+ELM;Elettronica e Microelettronica;;it
+ELM;Elektronika i mikroelektronika;Elektronika i mikroelektronika;pl
+ELM;Electronique et microélectronique;;fr
+ELM;Electronics and Microelectronics;"Electronic circuits, components and equipment; semiconductors; magnetic and superconducting materials and devices; power systems; printed circuits and integrated circuits (ICs); microwave technology and waveguides.";en
+ELM;Electrónica y Microelectrónica;;es
+OTH;Andere;Andere;de
+OTH;Altro;Altro;it
+OTH;Inny;Inny;pl
+OTH;Autre;Autre;fr
+OTH;Other;Other;en
+OTH;Otro;Otro;es
+HFC;Wasserstoff- und Brennstoffzellen;;de
+HFC;Idrogeno e pile a combustibile;;it
+HFC;Wodór i ogniwa paliwowe;;pl
+HFC;Hydrogène et piles à combustible;;fr
+HFC;Hydrogen and fuel cells;;en
+HFC;Hidrógeno y pilas de combustible;;es
+CCC;Klimaforschung und Kohlenstoffkreislauf;;de
+CCC;Cambiamento climatico e ricerca sul ciclo del carbonio;;it
+CCC;Zmiana klimatu i cykl węglowy;;pl
+CCC;Recherche sur les changements climatiques et le cycle du carbone;;fr
+CCC;Climate change and Carbon cycle research;;en
+CCC;Investigación sobre el cambio climático y el ciclo del carbono;;es
+LIF;Biowissenschaften;;de
+LIF;Scienze biologiche;;it
+LIF;Nauki biologiczne;;pl
+LIF;Sciences du vivant;;fr
+LIF;Life Sciences;"Biological sciences not included elsewhere; biochemistry; genetics; toxicology.";en
+LIF;Ciencias de la vida;;es
+IBI;Industrielle Biotechnologie;;de
+IBI;Biotecnologia industriale;;it
+IBI;Biotechnologia przemysłowa;;pl
+IBI;Biotechnologie industrielle;;fr
+IBI;Industrial biotech;;en
+IBI;Biotecnología industrial;;es
+BUS;Businessaspekte;;de
+BUS;Aspetti commerciali;;it
+BUS;Aspekty biznesowe;;pl
+BUS;Aspects commerciaux;;fr
+BUS;Business aspects;;en
+BUS;Aspectos comerciales;;es
+AGR;Landwirtschaft;;de
+AGR;Agricoltura;;it
+AGR;Rolnictwo;;pl
+AGR;Agriculture;;fr
+AGR;Agriculture;"Livestock production, crops and crop production; managerial and economic aspects of agriculture; veterinary medicine; animal husbandry; control of weeds, pests and diseases of plants; land use; forestry; agro-technology; agro-industrial research.";en
+AGR;Agricultura;;es
+PMM;Projektmanagementmethoden;;de
+PMM;Metodologie di gestione di progetti ;;it
+PMM;Metodologia zarządzania projektami ;;pl
+PMM;Méthodologies de gestion de projet ;;fr
+PMM;Project management methodologies ;;en
+PMM;Metodologías de gestión de proyectos ;;es
+TEL;Telekommunikation;;de
+TEL;Telecomunicazioni;;it
+TEL;Telekomunikacja;;pl
+TEL;Télécommunications;;fr
+TEL;Telecommunications;"Communication systems based on electromagnetic waves; radio and television equipment and transmissions; high-definition television (HDTV); satellite communications; integrated broadband communications (IBC); remote sensing; radar; network value-added services.";en
+TEL;Telecomunicaciones;;es
+REG;Regionalentwicklung;;de
+REG;Sviluppo regionale;;it
+REG;Rozwój regionalny;;pl
+REG;Développement régional;;fr
+REG;Regional Development;RTD activities related to regional development and the restructuring of economic sectors.;en
+REG;Desarrollo regional;;es
+INF;Information und Medien;;de
+INF;Informazione e mass media;;it
+INF;Informacje i media;Informacje, media;pl
+INF;Information et médias;;fr
+INF;Information and Media;"Information services; the media industry; library sciences.";en
+INF;Información y Medios de comunicación;;es
+OET;Sonstige Energiefragen;;de
+OET;Altri temi relativi all'energia;;it
+OET;Inne zagadnienia dotyczace energii;;pl
+OET;Autres thèmes liés à l'énergie;;fr
+OET;Other Energy Topics;"Demand analysis and utilization strategies; energy statistics; general energy topics not included elsewhere.";en
+OET;Otros temas relacionados con la energía;;es
+REF;Referenzmaterialien;;de
+REF;Materiali di riferimento;;it
+REF;Materialy referencyjne;;pl
+REF;Matériaux de référence;;fr
+REF;Reference Materials;"Preparation and distribution of certified reference material (CRM) samples for standardization, harmonization and comparison of analyses and measurements; technical specification of CRMs; storage and preservation of CRMs.";en
+REF;Materiales de referencia;;es
+TEC;Sonstige Technik;;de
+TEC;Altre tecnologie;;it
+TEC;Inne technologie;;pl
+TEC;Autres technologies;;fr
+TEC;Other Technology;"Textile technology; laser technology; membrane technology; vacuum engineering; hydraulics; particle technology; other specific technologies not included elsewhere.";en
+TEC;Otras tecnologías;;es
+EVA;Bewertung;;de
+EVA;Valutazione;;it
+EVA;Ocena;;pl
+EVA;Evaluation;;fr
+EVA;Evaluation;"Evaluation of Community RTD programmes; evaluation methodologies.";en
+EVA;Evaluación;;es
+FFU;Fossile Brennstoffe;;de
+FFU;Combustibili fossili;;it
+FFU;Paliwa kopalne;;pl
+FFU;Combustibles fossiles;;fr
+FFU;Fossil Fuels;"Coal and hydrocarbons; petroleum products; coke; by-products; transporting and storage of hydrocarbons; liquefaction and gasification of solid fuels; exploration; mining, processing and utilization.";en
+FFU;Combustibles fósiles;;es
+NET;Netzwerktechnologien ;;de
+NET;Tecnologie di rete ;;it
+NET;Technologie sieciowe ;;pl
+NET;Technologies de réseaux ;;fr
+NET;Network technologies ;;en
+NET;Tecnologías de redes ;;es
+IPR;Rechte an geistigem Eigentum;;de
+IPR;Diritti di proprietà intellettuale;;it
+IPR;Prawa własności intelektualnej;;pl
+IPR;Droits de propriété intellectuelle ;;fr
+IPR;Intellectual property rights;;en
+IPR;Derechos de la propiedad intelectual;;es
+IPS;Informationsverarbeitung und Informationssysteme;;de
+IPS;Elaborazione dati e Sistemi di informazione;;it
+IPS;Przetwarzanie informacji i systemy informacyjne;;pl
+IPS;Traitement de l'information et systèmes d'information;;fr
+IPS;Information Processing and Information Systems;"Technical aspects of information systems; computer hardware and software; data processing; databases; systems design and documentation; advanced systems architecture; expert systems; artificial inteligence (AI); computer-integrated manufacturing (CIM) systems; computer-aided design (CAD) systems; computer assisted translation (CAT) systems; cognitive science.";en
+IPS;Tratamiento de la información y Sistemas de información;;es
+SOC;Soziale Aspekte;;de
+SOC;Aspetti sociali;;it
+SOC;Aspekty spoleczne;;pl
+SOC;Aspects sociaux;;fr
+SOC;Social Aspects;"Social sciences; use of human resources; ergonomics; social implications of new technology; social effects of technology.";en
+SOC;Aspectos sociales;;es
+MET;Meteorologie;;de
+MET;Meteorologia;;it
+MET;Meteorologia;;pl
+MET;Météorologie;;fr
+MET;Meteorology;"Climatology; weather forecasting; weather modifications; collection and analysis of meteorological data.";en
+MET;Meteorología;;es
+ITT;Innovation und Technologietransfer;;de
+ITT;Innovazione e trasferimento di tecnologie;;it
+ITT;Innowacja i transfer technologii;;pl
+ITT;Innovation et Transfert de technologies;;fr
+ITT;Innovation and Technology Transfer;Development of mechanisms to promote innovation and technology transfer, utilization of the results of research, property rights and patents.;en
+ITT;Innovación y transferencia de tecnologías;;es
+LEG;Gesetze und Vorschriften;;de
+LEG;Legislazione e regolamentazione;;it
+LEG;Prawodawstwo i przepisy;;pl
+LEG;Législation et règlements;;fr
+LEG;Legislation and Regulations;Formulation, evaluation or application of laws and regulations, administrative measures, codes of conduct, decisions, directives or agreements for research and development in science and technology.;en
+LEG;Legislación y reglamentación;;es
+EMP;Beschäftigung ;;de
+EMP;Temi legati all'occupazione ;;it
+EMP;Zatrudnienie;;pl
+EMP;Considérations d¿emploi ;;fr
+EMP;Employment issues ;;en
+EMP;Empleo ;;es
+SCI;Wissenschaftliche Forschung;;de
+SCI;Ricerca scientifica;;it
+SCI;Badania Naukowe;;pl
+SCI;Recherche scientifique;;fr
+SCI;Scientific Research;General scientific and industrial research, or research not included elsewhere.;en
+SCI;Investigación científica;;es
+HCS;Gesundheitliche Versorgung/Leistungen ;;de
+HCS;Servizi/prestazioni sanitarie ;;it
+HCS;Opieka zdrowotna/służby zdrowia ;;pl
+HCS;Prestations/services de soins de santé ;;fr
+HCS;Healthcare delivery/services;;en
+HCS;Servicios de salud ;;es
+MEA;Meßverfahren;;de
+MEA;Metodi di misurazione;;it
+MEA;Metody pomiarowe;;pl
+MEA;Méthodes de mesures;;fr
+MEA;Measurement Methods;"Test facilities and methods; applied metrology; biomedical analyses; environmental analyses; verification methods; recording devices; non-destructive testing; online testing.";en
+MEA;Métodos de medición;;es
+FPR;Finanzierungsprogramm;;de
+FPR;Programmi di finanziamento;;it
+FPR;Programy finansowania;;pl
+FPR;Programmes de financement;;fr
+FPR;Funding Programmes;;en
+FPR;Programas de financiación;;es
+BIO;Biotechnologie;;de
+BIO;Biotecnologia;;it
+BIO;Biotechnologia;Biotechnologia;pl
+BIO;Biotechnologie;;fr
+BIO;Biotechnology;"Microbiology; cellular and molecular biology; genetic engineering; enzyme engineering; assessment of risk; applications of biotechnology in health, agriculture, food, industry and the environment.";en
+BIO;Biotecnología;;es
+MED;Medizin und Gesundheit;;de
+MED;Medicina e sanità;;it
+MED;Medycyna i zdrowie;;pl
+MED;Médecine et santé;;fr
+MED;Medicine and Health;"Human health (for veterinary medicine see ""Agriculture""); the effect of specific environments; public health;industrial medicine; medical research; nutrition; dentistry; nursing; physiology; pharmaceutical products; medical technology.";en
+MED;Medicina y Sanidad;;es
+ICT;Anwendungen der Informations- und Kommunikationstechnologie ;;de
+ICT;Applicazioni della tecnologia dell'informazione e della comunica;;it
+ICT;Technologie informacyjne i komunikacyjne ;;pl
+ICT;Applications dans le domaine des technologies de l'information ;;fr
+ICT;Information and communication technology applications ;;en
+ICT;Aplicaciones de tecnología de la información y la comunicación ;;es
+ABI;Landwirtschaftliche Biotechnologie ;;de
+ABI;Biotecnologia agricola ;;it
+ABI;Biotechnologia rolna ;;pl
+ABI;Biotechnologie agricole ;;fr
+ABI;Agricultural biotechnology ;;en
+ABI;Biotecnología agrícola ;;es
