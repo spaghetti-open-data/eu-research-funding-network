@@ -1,0 +1,5 @@
+# untrack .tlp files, they tend to be large and not strictly necessary
+# keep a .tlpx empty perspective, no data, only the scripts to build and processs the graph.
+# also .tlpx with graph data in if they are not too large.
+
+*.tlp
