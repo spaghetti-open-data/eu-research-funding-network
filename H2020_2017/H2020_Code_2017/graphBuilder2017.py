@@ -118,6 +118,7 @@ def main(graph):
   ecMaxContribution = graph.getDoubleProperty('ecMaxContribution')
   call = graph.getStringProperty('call')
   fundingScheme = graph.getStringProperty('fundingScheme')
+  tentativeSIC = graph.getStringProperty('TentativeSIC')
   
   # now create the properties of org-type nodes
   orgId = graph.getStringProperty('orgId') # also a property of edges
@@ -129,7 +130,9 @@ def main(graph):
   city = graph.getStringProperty('city')
   postCode = graph.getStringProperty('postCode')
   organizationUrl = graph.getStringProperty('organizationUrl')
-  
+  numPartners = graph.getIntegerProperty('numPartners')
+  numProjects = graph.getIntegerProperty('numProjects')
+  myMoney = graph.getDoubleProperty('myMoney')  
   # properties of edges
   role = graph.getStringProperty('role')
   ecContribution = graph.getDoubleProperty('ecContribution') # the money received by this organisation for this project
@@ -167,6 +170,7 @@ def main(graph):
     ecMaxContribution[n] = cleanAmount (p['ecMaxContribution'])
     call[n] = p['call']
     fundingScheme[n] = p['fundingScheme']    
+    tentativeSIC[n] = p['tentativeSIC']
   print (str(counter) + ' projects added')
    
   print ('Adding organizations and edges...')

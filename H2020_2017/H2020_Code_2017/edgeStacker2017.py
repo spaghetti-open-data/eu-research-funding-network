@@ -72,6 +72,7 @@ def main(graph):
   street = graph.getStringProperty("street")
   topics = graph.getStringProperty("topics")
   totalCost = graph.getDoubleProperty("totalCost")
+  relationshipValue = graph.getDoubleProperty('relationshipValue')
   viewBorderColor = graph.getColorProperty("viewBorderColor")
   viewBorderWidth = graph.getDoubleProperty("viewBorderWidth")
   viewColor = graph.getColorProperty("viewColor")
@@ -101,10 +102,12 @@ def main(graph):
 #  topicsVec = graph.getStringVectorProperty(topicsVec)
   
   stacked = graph.addSubGraph('stacked')
+#  doubleStacked = graph.addSubGraph('doubleStacked')
   # add nodes in one pass
   for n in graph.getNodes():
     if projectNode[n] == False: # the stacked graph's nodes are only organizations
       addedNode = stacked.addNode(n)
+#      otherAddedNode = doubleStacked.addNode(n)
   
   # add edges
   for e in graph.getEdges():
@@ -115,6 +118,12 @@ def main(graph):
     # we add the "stackable" information contained in e
     projectsTogether[stackedEdge] += 1
     moneyTogether[stackedEdge] += ecMaxContribution[e]
+    
+#    otherStackedEdge1 = findEdge (target, source, doubleStacked, True, True)
+#    # reversing source and target to keep track of each org's share of money
+#    relationshipValue[otherStackedEdge1] += e['ecContribution']
+#    otherStackedEdge2 = findEdge (source, target, doubleStacked, True, True)
+#    relationshipValue[otherStackedEdge2] += e['ecContribution']    
 
   end_script = datetime.datetime.now() 
   print ('Runtime: ' + str (end_script - start_script))
