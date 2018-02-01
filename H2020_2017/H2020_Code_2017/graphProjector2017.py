@@ -58,6 +58,7 @@ def main(graph):
   street = graph.getStringProperty("street")
   topics = graph.getStringProperty("topics")
   totalCost = graph.getDoubleProperty("totalCost")
+  tentativeSIC = graph.getStringProperty('TentativeSIC')
   viewBorderColor = graph.getColorProperty("viewBorderColor")
   viewBorderWidth = graph.getDoubleProperty("viewBorderWidth")
   viewColor = graph.getColorProperty("viewColor")
@@ -106,6 +107,7 @@ def main(graph):
 					startDate[newEdge] = startDate[p]
 					endDate[newEdge] = endDate[p]
 					topics[newEdge] = topics[p]
+					tentativeSIC[newEdge] = tentativeSIC[p]
 					
   end_script = datetime.datetime.now()
   
